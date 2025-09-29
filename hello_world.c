@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main(){
-    printf("Hello World!!!\n");
+    printf("Hello World!!!\n"); //printf("Hello World\n sono \"Andrea\""); \"Andrea\" per stampare le virgolette
     return 0;
 }
 /*

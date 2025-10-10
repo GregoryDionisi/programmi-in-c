@@ -13,47 +13,38 @@ int main(){
     printf("5. Esci\n");
     scanf("%d", &numero);
     //CASO CON LO SWITCH CASE
-   /*switch (numero)
-   {
-    case 1:
-        printf("Inserisci il primo numero:\n");
-        scanf("%f", &primo);
-        printf("Inserisci il secondo numero:\n");
-        scanf("%f", &secondo);
-        risultato = primo + secondo;
-        printf("%f + %f = %f\n", primo, secondo, risultato);
-        break;
-    case 2:
-        printf("Inserisci il primo numero:\n");
-        scanf("%f", &primo);
-        printf("Inserisci il secondo numero:\n");
-        scanf("%f", &secondo);
-        risultato = primo - secondo;
-        printf("%f - %f = %f\n", primo, secondo, risultato);
-        break;
-    case 3:
-        printf("Inserisci il primo numero:\n");
-        scanf("%f", &primo);
-        printf("Inserisci il secondo numero:\n");
-        scanf("%f", &secondo);
-        risultato = primo * secondo;
-        printf("%f * %f = %f\n", primo, secondo, risultato);
-        break;
-    case 4:
-        printf("Inserisci il primo numero:\n");
-        scanf("%f", &primo);
-        printf("Inserisci il secondo numero:\n");
-        scanf("%f", &secondo);
-        risultato = primo / secondo;
-        printf("%f / %f = %f\n", primo, secondo, risultato);
-        break;
-    case 5:
-        printf("Grazie e arrivederci\n");
-        break;
-    default:
-        printf("Errore, riprova!\n");
-   }*/
     if (numero > 0 && numero < 5){
+        printf("Inserisci il primo numero:\n");
+        scanf("%f", &primo);
+        printf("Inserisci il secondo numero:\n");
+        scanf("%f", &secondo);
+    }
+    switch (numero)
+    {
+        case 1:
+            risultato = primo + secondo;
+            printf("%f + %f = %f\n", primo, secondo, risultato);
+            break;
+        case 2:
+            risultato = primo - secondo;
+            printf("%f - %f = %f\n", primo, secondo, risultato);
+            break;
+        case 3:
+            risultato = primo * secondo;
+            printf("%f * %f = %f\n", primo, secondo, risultato);
+            break;
+        case 4:
+            risultato = primo / secondo;
+            printf("%f / %f = %f\n", primo, secondo, risultato);
+            break;
+        case 5:
+            printf("Grazie e arrivederci\n");
+            break;
+        default:
+            printf("Errore, riprova!\n");
+    }
+   //CASO CON L'IF/ELSE
+    /*if (numero > 0 && numero < 5){
         printf("Inserisci il primo numero:\n");
         scanf("%f", &primo);
         printf("Inserisci il secondo numero:\n");
@@ -79,7 +70,7 @@ int main(){
     } else {
         printf("Errore, riprova!\n");
 
-    }
+    } */
     } while(numero != 5);
     return 0;
 }

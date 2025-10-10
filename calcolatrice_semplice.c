@@ -34,8 +34,12 @@ int main(){
             printf("%f * %f = %f\n", primo, secondo, risultato);
             break;
         case 4:
+            if (secondo != 0){
             risultato = primo / secondo;
             printf("%f / %f = %f\n", primo, secondo, risultato);
+            } else {
+                printf("Divisione impossibile\n");
+            }
             break;
         case 5:
             printf("Grazie e arrivederci\n");

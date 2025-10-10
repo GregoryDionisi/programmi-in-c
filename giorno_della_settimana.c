@@ -2,7 +2,8 @@
 
 int main(){
     int numero;
-    while(numero != 0){
+    do
+    {
     printf("\nInserisci un numero da 1 a 7 (0 per uscire):\n");
     scanf("%d", &numero);
     if(numero == 1)
@@ -33,6 +34,6 @@ int main(){
     {
         printf("Domenica");
     }
-    }
+    } while(numero != 0);
     return 0;
 }

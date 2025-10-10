@@ -12,7 +12,8 @@ int main(){
     printf("4. Divisione\n");
     printf("5. Esci\n");
     scanf("%d", &numero);
-   switch (numero)
+    //CASO CON LO SWITCH CASE
+   /*switch (numero)
    {
     case 1:
         printf("Inserisci il primo numero:\n");
@@ -51,7 +52,34 @@ int main(){
         break;
     default:
         printf("Errore, riprova!\n");
-   }
+   }*/
+    if (numero > 0 && numero < 5){
+        printf("Inserisci il primo numero:\n");
+        scanf("%f", &primo);
+        printf("Inserisci il secondo numero:\n");
+        scanf("%f", &secondo);
+        if (numero == 1){
+            risultato = primo + secondo;
+            printf("Il risultato della somma è %f\n", risultato);
+        }
+        else if (numero == 2){
+            risultato = primo - secondo;
+            printf("Il risultato della sottrazione è %f\n", risultato);
+        }
+        else if (numero == 3){
+            risultato = primo * secondo;
+            printf("Il risultato della moltiplicazione è %f\n", risultato);
+        }
+        else if (numero == 4){
+            risultato = primo - secondo;
+            printf("Il risultato della divisione è %f\n", risultato);
+        }
+    } else if (numero == 5){
+        printf("Grazie e arrivederci\n");
+    } else {
+        printf("Errore, riprova!\n");
+
+    }
     } while(numero != 5);
     return 0;
 }

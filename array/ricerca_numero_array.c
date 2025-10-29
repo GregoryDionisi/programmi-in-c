@@ -4,7 +4,7 @@ int main(){
     const int N = 8;
     int i, v[N], numero, trovato = 0;
 
-    printf("Inserisci 8 numeri:\n");
+    printf("Inserisci %d numeri:\n", N);
     for(i=0; i<N; i++){
         scanf("%d", &v[i]);
     }

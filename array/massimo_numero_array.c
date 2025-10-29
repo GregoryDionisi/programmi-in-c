@@ -4,7 +4,7 @@ int main(){
     const int N = 10;
     int i, v[N], max;
 
-    printf("Inserisci 10 numeri:\n");
+    printf("Inserisci %d numeri:\n", N);
     for(i=0; i<N; i++){
         scanf("%d", &v[i]);
     }

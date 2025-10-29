@@ -3,7 +3,7 @@ int main(){
     const int N = 5;
     int i, v[N], somma = 0;
 
-    printf("Inserisci 5 numeri:\n");
+    printf("Inserisci %d numeri:\n", N);
     for(i=0; i<N; i++){
         scanf("%d", &v[i]);
         somma+=v[i];

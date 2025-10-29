@@ -2,7 +2,7 @@
 #include <stdlib.h> //fondamentale per usare rand()
 
 int main(){
-    int v[10], i, j, temp;
+    int v[10], i, j, temp, x, inizio, fine, medio;
 
     printf("Stampo array disordinato\n");
     for(i=0; i<10; i++){
@@ -16,14 +16,36 @@ int main(){
         i = j - 1;
 
         while(i >= 0 && v[i] > temp){
-            v[i+1] = v[i]; //qui spostiamo solo il numero più grande a destra senza inserire effettivamente il numero che non fa parte del sottoarray nel sottoarray (v[j])
+            v[i+1] = v[i];
             i--;
         }
-        v[i+1] = temp; //qui invece lo inseriemo effettivamente nel sottoarray nella posizione corretta
+        v[i+1] = temp;
     }
 
     printf("\nStampo array ordinato\n");
     for(i=0; i<10; i++){
         printf("%d \t", v[i]);
+    }
+
+    printf("Inserisci il numero da cercare:");
+    scanf("%d", x);
+
+    inizio = 0;
+    fine = 9;
+
+    medio = (inizio + fine)/2;
+    if(v[medio] == x){
+        printf("Trovato in posizione %d\n", medio);
+    } else {
+        if(x > v[medio]){
+            inizio = medio + 1;
+        } else {
+            fine = medio + 1;
+        }
+    }
+    if(v[medio] == x){
+        printf("Trovato in posizione %d\n", medio);
+    } else {
+        printf("NON HO Trovato \n");
     }
 }

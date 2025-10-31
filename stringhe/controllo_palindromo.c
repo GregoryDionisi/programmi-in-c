@@ -7,9 +7,10 @@ int main(){
     int conta, i, n, trovato=0;
     char stringa1[N];
 
-    printf("Inserisci la prima riga: ");
+    printf("Inserisci la prima stringa: ");
     scanf("%s", stringa1);
     n = strlen(stringa1);
+    gets(stringa1); //gets
 
     for(i=0; i < n/2; i++){
         if(stringa1[i] != stringa1[n-1-i]) trovato = 1;
